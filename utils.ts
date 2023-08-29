@@ -1,4 +1,4 @@
-import { To, KeyCode, Manipulator, KarabinerRules } from "./types";
+import { KarabinerRules, KeyCode, Manipulator, To } from "./types";
 
 /**
  * Custom way to describe a command in a layer
@@ -149,14 +149,7 @@ function generateSubLayerVariableName(key: KeyCode) {
  * Shortcut for "open" shell command
  */
 export function open(what: string): LayerCommand {
-  return {
-    to: [
-      {
-        shell_command: `open ${what}`,
-      },
-    ],
-    description: `Open ${what}`,
-  };
+  return command(`Open ${what}`, `open ${what}`);
 }
 
 /**
@@ -164,4 +157,18 @@ export function open(what: string): LayerCommand {
  */
 export function app(name: string): LayerCommand {
   return open(`-a '${name}.app'`);
+}
+
+/**
+ * Function for execute shell command
+ */
+export function command(description: string, command: string): LayerCommand {
+  return {
+    to: [
+      {
+        shell_command: `${command}`,
+      },
+    ],
+    description,
+  };
 }
