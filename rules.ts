@@ -137,9 +137,10 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      m: app("Google Meet"),
     },
 
-    // w = "Window" via rectangle.app
+    // w = "Window" via yabai
     w: {
       // Window navigation
       y: command("Window: Navigate to Left", "yabai -m window --focus west"),
