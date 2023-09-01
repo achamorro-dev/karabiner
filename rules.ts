@@ -222,29 +222,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      p: {
-        to: [
-          {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
-      semicolon: {
-        to: [
-          {
-            key_code: "fastforward",
-          },
-        ],
-      },
-      e: {
-        to: [
-          {
-            // Emoji picker
-            key_code: "spacebar",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
