@@ -273,10 +273,12 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      e: open("raycast://extensions/raycast/emoji/search-emoji"),
+      e: open("raycast://extensions/FezVrasta/emoji/emoji"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
+      p: open("raycast://confetti"),
+      v: open("raycast://extensions/jomifepe/bitwarden/search"),
     },
   }),
 ];
