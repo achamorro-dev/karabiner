@@ -63,6 +63,34 @@ const rules: KarabinerRules[] = [
             key_code: "page_up",
           },
         ],
+        // Avoid conflict with Hyper+w+u rule
+        conditions: [
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_w",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_s",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_v",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_c",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_r",
+            value: 0,
+          },
+        ],
         type: "basic",
       },
       //      {
