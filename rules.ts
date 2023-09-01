@@ -128,6 +128,15 @@ const rules: KarabinerRules[] = [
       // l: open(
       //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       // ),
+      // e: Emoji picker
+      e: {
+        to: [
+          {
+            key_code: "spacebar",
+            modifiers: ["right_control", "right_command"],
+          },
+        ],
+      },
     },
 
     // w = "Window" via rectangle.app
