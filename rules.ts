@@ -233,46 +233,73 @@ const rules: KarabinerRules[] = [
     // w = "Window" via yabai
     w: {
       // Window navigation
-      y: command("Window: Navigate to Left", "yabai -m window --focus west"),
-      u: command("Window: Navigate to Down", "yabai -m window --focus south"),
-      i: command("Window: Navigate to Up", "yabai -m window --focus north"),
-      o: command("Window: Navigate to Right", "yabai -m window --focus east"),
+      y: command(
+        "Window: Navigate to Left",
+        "/opt/homebrew/bin/yabai -m window --focus west"
+      ),
+      u: command(
+        "Window: Navigate to Down",
+        "/opt/homebrew/bin/yabai -m window --focus south"
+      ),
+      i: command(
+        "Window: Navigate to Up",
+        "/opt/homebrew/bin/yabai -m window --focus north"
+      ),
+      o: command(
+        "Window: Navigate to Right",
+        "/opt/homebrew/bin/yabai -m window --focus east"
+      ),
       // Window movements
-      h: command("Window: Move Left", "yabai -m window --warp west"),
-      j: command("Window: Move Down", "yabai -m window --warp south"),
-      k: command("Window: Move Up", "yabai -m window --warp north"),
-      l: command("Window: Move Right", "yabai -m window --warp east"),
+      h: command(
+        "Window: Move Left",
+        "/opt/homebrew/bin/yabai -m window --warp west"
+      ),
+      j: command(
+        "Window: Move Down",
+        "/opt/homebrew/bin/yabai -m window --warp south"
+      ),
+      k: command(
+        "Window: Move Up",
+        "/opt/homebrew/bin/yabai -m window --warp north"
+      ),
+      l: command(
+        "Window: Move Right",
+        "/opt/homebrew/bin/yabai -m window --warp east"
+      ),
       // Window resizing
       n: command(
         "Window: Resize Left",
-        "yabai -m window --resize left:-50:0; \
-        yabai -m window --resize right:-50:0"
+        "/opt/homebrew/bin/yabai -m window --resize left:-50:0; \
+        /opt/homebrew/bin/yabai -m window --resize right:-50:0"
       ),
       m: command(
         "Window: Resize Down",
-        "yabai -m window --resize bottom:0:50; \
-        yabai -m window --resize top:0:50"
+        "/opt/homebrew/bin/yabai -m window --resize bottom:0:50; \
+        /opt/homebrew/bin/yabai -m window --resize top:0:50"
       ),
       comma: command(
         "Window: Resize Up",
-        "yabai -m window --resize top:0:-50; \
-        yabai -m window --resize bottom:0:-500"
+        "/opt/homebrew/bin/yabai -m window --resize top:0:-50; \
+        /opt/homebrew/bin/yabai -m window --resize bottom:0:-500"
       ),
       period: command(
         "Window: Resize Right",
-        "yabai -m window --resize right:50:0; \
-        yabai -m window --resize left:50:0"
+        "/opt/homebrew/bin/yabai -m window --resize right:50:0; \
+        /opt/homebrew/bin/yabai -m window --resize left:50:0"
       ),
-      t: command(
+      spacebar: command(
         "Window: Toggle Float/Unfloat",
-        "yabai -m window --toggle float; \
-          yabai -m window --toggle border"
+        "/opt/homebrew/bin/yabai -m window --toggle float; \
+        /opt/homebrew/bin/yabai -m window --toggle border"
       ),
-      f: command(
+      return_or_enter: command(
         "Window: Full Screen",
-        "yabai -m window --toggle zoom-fullscreen"
+        "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen"
       ),
-      r: command("Window: Rotate", "yabai -m space --rotate 90"),
+      r: command(
+        "Window: Rotate",
+        "/opt/homebrew/bin/yabai -m space --rotate 90"
+      ),
     },
 
     // s = "System"
