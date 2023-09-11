@@ -296,6 +296,10 @@ const rules: KarabinerRules[] = [
         "Window: Full Screen",
         "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen"
       ),
+      e: command(
+        "Window: Equal size",
+        "/opt/homebrew/bin/yabai -m space --balance"
+      ),
       r: command(
         "Window: Rotate",
         "/opt/homebrew/bin/yabai -m space --rotate 90"
