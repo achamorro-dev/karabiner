@@ -25,11 +25,6 @@
                     ]
                   }
                 ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
                 "type": "basic"
               },
               {
@@ -1017,6 +1012,29 @@
                 "type": "basic",
                 "from": {
                   "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_s",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "key_code": "mute"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
                   "modifiers": {
                     "mandatory": [
                       "any"

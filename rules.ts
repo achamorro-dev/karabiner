@@ -18,11 +18,6 @@ const rules: KarabinerRules[] = [
             modifiers: ["left_command", "left_control", "left_option"],
           },
         ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
         type: "basic",
       },
       {
@@ -319,6 +314,13 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "volume_decrement",
+          },
+        ],
+      },
+      m: {
+        to: [
+          {
+            key_code: "mute",
           },
         ],
       },
