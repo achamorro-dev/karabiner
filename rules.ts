@@ -88,96 +88,96 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      {
-        description: "Shift left move to prev word",
-        from: {
-          key_code: "left_shift",
-        },
-        to: [
-          {
-            key_code: "left_shift",
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "left_arrow",
-            modifiers: ["left_option"],
-          },
-        ],
-        conditions: [
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_w",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_s",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_v",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_c",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_r",
-            value: 0,
-          },
-        ],
-        type: "basic",
-      },
-      {
-        description: "Shift right move to next word",
-        from: {
-          key_code: "right_shift",
-        },
-        to: [
-          {
-            key_code: "right_shift",
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "right_arrow",
-            modifiers: ["right_option"],
-          },
-        ],
-        conditions: [
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_w",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_s",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_v",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_c",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_r",
-            value: 0,
-          },
-        ],
-        type: "basic",
-      },
+      // {
+      //   description: "Shift left move to prev word",
+      //   from: {
+      //     key_code: "left_shift",
+      //   },
+      //   to: [
+      //     {
+      //       key_code: "left_shift",
+      //     },
+      //   ],
+      //   to_if_alone: [
+      //     {
+      //       key_code: "left_arrow",
+      //       modifiers: ["left_option"],
+      //     },
+      //   ],
+      //   conditions: [
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_w",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_s",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_v",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_c",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_r",
+      //       value: 0,
+      //     },
+      //   ],
+      //   type: "basic",
+      // },
+      // {
+      //   description: "Shift right move to next word",
+      //   from: {
+      //     key_code: "right_shift",
+      //   },
+      //   to: [
+      //     {
+      //       key_code: "right_shift",
+      //     },
+      //   ],
+      //   to_if_alone: [
+      //     {
+      //       key_code: "right_arrow",
+      //       modifiers: ["right_option"],
+      //     },
+      //   ],
+      //   conditions: [
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_w",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_s",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_v",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_c",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_r",
+      //       value: 0,
+      //     },
+      //   ],
+      //   type: "basic",
+      // },
       //      {
       //        type: "basic",
       //        description: "Disable CMD + Tab to force Hyper Key usage",
