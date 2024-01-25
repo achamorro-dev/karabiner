@@ -202,7 +202,7 @@ const rules: KarabinerRules[] = [
       v: app("Visual Studio Code"),
       n: app("Notion"),
       // t: Terminal
-      t: app("Warp"),
+      t: app("Alacritty"),
       // Open todo list managed via *H*ypersonic
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
@@ -223,6 +223,7 @@ const rules: KarabinerRules[] = [
         ],
       },
       m: app("Google Meet"),
+      c: app("ChatGPT"),
     },
 
     // w = "Window" via yabai
