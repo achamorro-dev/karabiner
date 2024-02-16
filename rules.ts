@@ -404,6 +404,7 @@ const rules: KarabinerRules[] = [
       ),
       p: open("raycast://confetti"),
       v: open("raycast://extensions/jomifepe/bitwarden/search"),
+      o: open("raycast://extensions/guga4ka/authy/search-otp"),
     },
   }),
 ];
