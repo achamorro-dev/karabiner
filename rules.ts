@@ -88,6 +88,55 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
+      {
+        description: "Tmux prefix",
+        from: {
+          key_code: "x",
+          modifiers: {
+            mandatory: [
+              "left_command",
+              "left_control",
+              "left_shift",
+              "left_option",
+            ],
+          },
+        },
+        to: [
+          {
+            key_code: "b",
+            modifiers: ["left_control"],
+          },
+        ],
+        // Avoid conflict with Hyper+w+u rule
+        conditions: [
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_w",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_s",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_v",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_c",
+            value: 0,
+          },
+          {
+            type: "variable_if",
+            name: "hyper_sublayer_r",
+            value: 0,
+          },
+        ],
+        type: "basic",
+      },
       // {
       //   description: "Shift left move to prev word",
       //   from: {
@@ -201,7 +250,6 @@ const rules: KarabinerRules[] = [
       g: app("Google Chrome"),
       v: app("Visual Studio Code"),
       n: app("Notion"),
-      // t: Terminal
       t: app("Alacritty"),
       // Open todo list managed via *H*ypersonic
       // h: open(
@@ -222,7 +270,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      m: app("Google Meet"),
+      m: app("Microsoft Teams (work or school)"), // [m]essages
       c: app("ChatGPT"),
     },
 
