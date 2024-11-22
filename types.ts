@@ -4,6 +4,7 @@ export interface KarabinerRules {
 }
 
 export interface Manipulator {
+  identifiers?: Identifiers;
   description?: string;
   type: "basic";
   from: From;
