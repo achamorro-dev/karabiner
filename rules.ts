@@ -470,6 +470,61 @@ fs.writeFileSync(
           complex_modifications: {
             rules,
           },
+          devices: [
+            {
+              identifiers: {
+                is_keyboard: true,
+                is_pointing_device: true,
+                product_id: 561,
+                vendor_id: 13364,
+              },
+              ignore: false,
+            },
+            {
+              identifiers: {
+                is_keyboard: true,
+                product_id: 4137,
+                vendor_id: 39658,
+              },
+              simple_modifications: [
+                {
+                  from: { key_code: "left_command" },
+                  to: [{ key_code: "left_option" }],
+                },
+                {
+                  from: { key_code: "left_option" },
+                  to: [{ key_code: "left_command" }],
+                },
+                {
+                  from: {
+                    key_code: "comma",
+                    modifiers: {
+                      mandatory: ["right_option"],
+                    },
+                  },
+                  to: [
+                    {
+                      key_code: "grave_accent_and_tilde",
+                    },
+                  ],
+                },
+                {
+                  from: {
+                    key_code: "period",
+                    modifiers: {
+                      mandatory: ["right_option"],
+                    },
+                  },
+                  to: [
+                    {
+                      key_code: "grave_accent_and_tilde",
+                      modifiers: ["left_shift"],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
         },
       ],
     },
