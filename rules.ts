@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { app, command, createHyperSubLayers, open } from "./utils";
+import { command, createHyperSubLayers, open } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -88,55 +88,55 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      {
-        description: "Tmux prefix",
-        from: {
-          key_code: "x",
-          modifiers: {
-            mandatory: [
-              "left_command",
-              "left_control",
-              "left_shift",
-              "left_option",
-            ],
-          },
-        },
-        to: [
-          {
-            key_code: "b",
-            modifiers: ["left_control"],
-          },
-        ],
-        // Avoid conflict with Hyper+w+u rule
-        conditions: [
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_w",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_s",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_v",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_c",
-            value: 0,
-          },
-          {
-            type: "variable_if",
-            name: "hyper_sublayer_r",
-            value: 0,
-          },
-        ],
-        type: "basic",
-      },
+      // {
+      //   description: "Tmux prefix",
+      //   from: {
+      //     key_code: "x",
+      //     modifiers: {
+      //       mandatory: [
+      //         "left_command",
+      //         "left_control",
+      //         "left_shift",
+      //         "left_option",
+      //       ],
+      //     },
+      //   },
+      //   to: [
+      //     {
+      //       key_code: "b",
+      //       modifiers: ["left_control"],
+      //     },
+      //   ],
+      //   // Avoid conflict with Hyper+w+u rule
+      //   conditions: [
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_w",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_s",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_v",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_c",
+      //       value: 0,
+      //     },
+      //     {
+      //       type: "variable_if",
+      //       name: "hyper_sublayer_r",
+      //       value: 0,
+      //     },
+      //   ],
+      //   type: "basic",
+      // },
       // {
       //   description: "Shift left move to prev word",
       //   from: {
@@ -247,17 +247,17 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // o = "Open" applications
     o: {
-      g: app("Google Chrome"),
-      v: app("Visual Studio Code"),
-      n: app("Notion"),
-      t: app("Alacritty"),
+      // g: app("Google Chrome"),
+      // v: app("Visual Studio Code"),
+      // n: app("Notion"),
+      // t: app("Alacritty"),
       // Open todo list managed via *H*ypersonic
       // h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       // ),
-      s: app("Spotify"),
-      f: app("Figma"),
-      a: app("Arc"),
+      // s: app("Spotify"),
+      // f: app("Figma"),
+      // a: app("Arc"),
       // l: open(
       //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       // ),
@@ -270,8 +270,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      m: app("Microsoft Teams (work or school)"), // [m]essages
-      c: app("ChatGPT"),
+      // c: app("ChatGPT"),
     },
 
     // w = "Window" via yabai
